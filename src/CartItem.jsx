@@ -9,20 +9,23 @@ const CartItem = ({ onContinueShopping }) => {
   const dispatch = useDispatch();
 
   // Calculate total amount for all products in the cart
+  var itemCount=0;
+
   const calculateTotalAmount = () => {
    
       
     let totalAmount = 0;
-    let itemCount = 0;
+  
     cart.forEach( item => {
 
       totalAmount += calculateTotalCost(item);
-      itemCount++;
+     itemCount++;
+     
     });
     
     
-    alert(totalAmount);
-    alert(itemCount);
+    //alert(totalAmount);
+    //alert(itemCount);
  
   };
 
