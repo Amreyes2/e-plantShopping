@@ -21,12 +21,30 @@ export const CartSlice = createSlice({
     
   }
     },
+
+
+
     removeItem: (state, action) => {
-      alert('Delete item');
-     
-      state.items = state.items.filter(item => item.name !== action.payload);
+      const {name} =action.payload;
+
+  //alert("hola");
+
+
+  //alert( name);
+
+        state.items = state.items.filter(item => item.name !== name);
+
+     //     alert("hola2");
+            
+    
     },
    
+
+
+
+
+
+
    
     addQuantity: (state, action) => {
   
