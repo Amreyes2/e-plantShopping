@@ -13,14 +13,16 @@ const CartItem = ({ onContinueShopping }) => {
    
       
     let totalAmount = 0;
-    
+    let itemCount = 0;
     cart.forEach( item => {
 
       totalAmount += calculateTotalCost(item);
+      itemCount++;
     });
     
     
     alert(totalAmount);
+    alert(itemCount);
  
   };
 
