@@ -33,9 +33,7 @@ const CartItem = ({ onContinueShopping }) => {
 
   const handleContinueShopping = (e) => {
     
-    alert("hola");
-    e.onContinueShopping();
-    alert("hola2");
+  onContinueShopping();
   };
 
   const handlecheckout = (e) => {
