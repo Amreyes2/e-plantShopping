@@ -4,6 +4,8 @@ import { removeItem, addQuantity, decQuantity } from './CartSlice';
 import './CartItem.css';
 
 
+
+
 const CartItem = ({ onContinueShopping }) => {
   const cart = useSelector(state => state.cart.items);
   const dispatch = useDispatch();
@@ -30,7 +32,10 @@ const CartItem = ({ onContinueShopping }) => {
   };
 
   const handleContinueShopping = (e) => {
-    //dispatch(decQuantity(item));
+    
+    alert("hola");
+    e.onContinueShopping();
+    alert("hola2");
   };
 
   const handlecheckout = (e) => {
@@ -104,7 +109,7 @@ const CartItem = ({ onContinueShopping }) => {
       </div>
       <div style={{ marginTop: '20px', color: 'black' }} className='total_cart_amount'></div>
       <div className="continue_shopping_btn">
-        <button className="get-started-button" onClick={(e) => handleContinueShopping(e)}>Continue Shopping</button>
+        <button   className="get-started-button" onClick={(e) => handleContinueShopping(e)}>Continue Shopping</button>
         <br />
         <button className="get-started-button1" onClick={(e) => handlecheckout(e)}>Checkout</button>
       </div>
